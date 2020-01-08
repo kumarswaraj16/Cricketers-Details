@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin-left: 30%;">
+        <div class="row">
+            <div style=" margin-top: 50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div>
+                        <h1 class="text-center badge-secondary">
+                            <%= title %>
+                        </h1>
+
+                    </div>
+                    <div class="jumbotron">
+                        <form action="/update/" role="form" class="form-horizontal" method="post">
+                            <input type="hidden" name="id" value="<%= records._id%>">
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="cname" value="<%= records.name %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="ccountry" value="<%= records.country %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="crole" value="<%= records.role %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="cmatches" value="<%= records.matches %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="chalfcentury" value="<%= records.halfCentury %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="ccentury" value="<%= records.century %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="cwicket" value="<%= records.wicket %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="ccatches" value="<%= records.catches %>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <input type="submit" class="btn btn-info" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
